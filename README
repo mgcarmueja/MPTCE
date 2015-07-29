@@ -18,7 +18,7 @@ Version 0.2 (Beta)
 
 MPTCE is a software written in C# that aims to enable people to use surface electromyography (SEMG) devices at home for biofeedback training, controlling their computer through myoelectrical signals, or whatever they want to do with it. SEMG signals are processed in order to generate codes form a set of predefined movements by using either threshold-based activation or different pattern recognition algorithms. 
 
-This software is being developed in collaboration with the Christian Doppler Laboratory for Restoration of Extremity Function and ships with support for an Texas Instruments ADS1298-based USB EMG data acquisition device developed at the Christian Doppler Laboratory for Biomedical Engineering, both at the Medical University of Vienna (Austria).
+This software is being developed in collaboration with the Christian Doppler Laboratory for Restoration of Extremity Function and ships with support for an Texas Instruments ADS1298-based USB EMG data acquisition device developed at the Center for Medical Physics and Biomedical Engineering, both at the Medical University of Vienna (Austria).
 
 
 
