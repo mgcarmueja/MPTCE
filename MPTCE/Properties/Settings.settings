@@ -1,0 +1,123 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MPTCE.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AcqDeviceNChannels" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="AcqDeviceSampleFreq" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+    <Setting Name="SelectedDevice" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ADS1298</Value>
+    </Setting>
+    <Setting Name="AcqDeviceGain" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="AcqDeviceMinV" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">-2</Value>
+    </Setting>
+    <Setting Name="AcqDeviceMaxV" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="AcqSimultMovements" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="AcqDetectThresholds" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AcqDeviceList" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;ADS1298&lt;/string&gt;
+  &lt;string&gt;playback&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="AcqMovementsList" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;rest&lt;/string&gt;
+  &lt;string&gt;open&lt;/string&gt;
+  &lt;string&gt;close&lt;/string&gt;
+  &lt;string&gt;flex&lt;/string&gt;
+  &lt;string&gt;extend&lt;/string&gt;
+  &lt;string&gt;pronation&lt;/string&gt;
+  &lt;string&gt;supination&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="AcqScheduleActive" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AcqScheduleItemTime" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="AcqAllowedMovements" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;1,3&lt;/string&gt;
+  &lt;string&gt;2,3&lt;/string&gt;
+  &lt;string&gt;1,4&lt;/string&gt;
+  &lt;string&gt;2,4&lt;/string&gt;
+  &lt;string&gt;1,5&lt;/string&gt;
+  &lt;string&gt;2,5&lt;/string&gt;
+  &lt;string&gt;1,6&lt;/string&gt;
+  &lt;string&gt;2,6&lt;/string&gt;
+  &lt;string&gt;3,5&lt;/string&gt;
+  &lt;string&gt;4,5&lt;/string&gt;
+  &lt;string&gt;3,6&lt;/string&gt;
+  &lt;string&gt;4,6&lt;/string&gt;
+  &lt;string&gt;1,3,5&lt;/string&gt;
+  &lt;string&gt;2,3,5&lt;/string&gt;
+  &lt;string&gt;1,3,6&lt;/string&gt;
+  &lt;string&gt;2,3,6&lt;/string&gt;
+  &lt;string&gt;1,4,5&lt;/string&gt;
+  &lt;string&gt;2,4,5&lt;/string&gt;
+  &lt;string&gt;1,4,6&lt;/string&gt;
+  &lt;string&gt;2,4,6&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="AcqRepetitionsPerMovement" Type="System.UInt32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="TrtFeaturesList" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;mean&lt;/string&gt;
+  &lt;string&gt;tmabs&lt;/string&gt;
+  &lt;string&gt;twl&lt;/string&gt;
+  &lt;string&gt;tzc&lt;/string&gt;
+  &lt;string&gt;tslpchs&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="TrtTrainingSetSize" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">80</Value>
+    </Setting>
+    <Setting Name="TrtValidationSetSize" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">40</Value>
+    </Setting>
+    <Setting Name="TrtContractionTimePercentage" Type="System.Single" Scope="Application">
+      <Value Profile="(Default)">0.7</Value>
+    </Setting>
+    <Setting Name="TrtWindowSizeMsec" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="TrtWindowOffsetMsec" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="AcqScheduleWarmupItems" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ReaConsumerList" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;keyboard&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ReaMovDisplayer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">movDisplay</Value>
+    </Setting>
+    <Setting Name="ADS1298CorrectOffset" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
