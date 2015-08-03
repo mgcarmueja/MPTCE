@@ -2,7 +2,7 @@ This branch contains EMG recordings in HDF5 format for MPTCE
 
 These recordings were converted from the BioPatRec data set 6mov8chUFS. 
 
-File conversion was done using the matlab script at https://github.com/mgcarmueja/MPTCE/tree/master/Matlab%20to%20HDF5%20conversion
+File conversion was done using the Matlab script at https://github.com/mgcarmueja/MPTCE/tree/master/Matlab%20to%20HDF5%20conversion
 
 The original data set can be found at https://github.com/biopatrec/biopatrec/tree/Data_Repository/6mov8chFUS
 
