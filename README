@@ -113,9 +113,9 @@ ADDITIONAL CONTENTS
 ACKNOWLEDGEMENTS
 ================
 
-* The code in EPDevice for accessing the ADS1298 device via USB has been kindly provided by Kamil Lezak - kamil|AT|lezak|DOT|org - 
+* The code in EPDevice for accessing the ADS1298 device via USB has been provided by the Center for Medical Physics and Biomedical Engineering, at the Medical University of Vienna (http://www.zmpbmt.meduniwien.ac.at/)
 
-* This software makes use of the Encog Machine Learning Framework by Jeff Heaton for supporting ANN-based pattern recognizers.You can find out more about it here: 
+* This software makes use of the Encog Machine Learning Framework by Jeff Heaton for supporting ANN-based pattern recognizers.You can find out more about it at 
 http://www.heatonresearch.com/encog
 
 
@@ -129,8 +129,10 @@ https://www.gnu.org/licenses/lgpl.html
 
 http://www.gnu.org/licenses/gpl.html
 
+Application icons are licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License
 
-
+All other clipart and images used in the software are released under a
+Creative Commons CC0 1.0 Universal License.
 
 
 
