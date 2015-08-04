@@ -4,8 +4,6 @@ This is the Myoelectric Personal Training and Control Environment (MPTCE)
 
 —————————————————————————————————————————————————————————————————————————
 
-Version 0.2 (Beta)
-
 =========================================================================
 
 (c)2015 by Martín García Carmueja  - mgcarmueja|AT|gmail|DOT|com -
@@ -14,11 +12,9 @@ Version 0.2 (Beta)
 
 
 
+MPTCE is an application that aims to enable people to use surface electromyography (sEMG) data acquisition devices at home for biofeedback training. sEMG signals are processed in order to generate codes for a set of predefined movements by using either threshold-based activation or different pattern recognition algorithms. The generated codes can then be mapped to keyboard events and used to control other programs. 
 
-
-MPTCE is a software written in C# that aims to enable people to use surface electromyography (SEMG) devices at home for biofeedback training, controlling their computer through myoelectrical signals, or whatever they want to do with it. SEMG signals are processed in order to generate codes form a set of predefined movements by using either threshold-based activation or different pattern recognition algorithms. 
-
-This software is being developed in collaboration with the Christian Doppler Laboratory for Restoration of Extremity Function and ships with support for an Texas Instruments ADS1298-based USB EMG data acquisition device developed at the Center for Medical Physics and Biomedical Engineering, both at the Medical University of Vienna (Austria).
+This software is being developed in collaboration with the Christian Doppler Laboratory for Restoration of Extremity Function and ships with support for a Texas Instruments ADS1298-based USB EMG data acquisition device developed at the Center for Medical Physics and Biomedical Engineering, both at the Medical University of Vienna (Austria). A playback virtual device for simulation purposes is also included.
 
 
 
@@ -27,7 +23,7 @@ DISCLAIMER
 
 
 
-This software was developed as part of the work conducted by the author to
+This software was initially developed as part of the work conducted by the author to
 obtain his Master’s degree. While the code has been reasonably tested, it lacks any medical certification and should be considered experimental. Therefore, the author cannot assume any liabilities derived from using it. USE THIS SOFTWARE AT YOUR OWN RISK!
 
 
@@ -45,32 +41,21 @@ REQUIREMENTS
 
 
 
-MPTCE is delivered to you as a Visual Studio 2013 solution. In order to compile and run it, you will need:
+MPTCE is delivered as a Visual Studio 2013 solution. In order to compile and run it, you will need:
 
-- Microsoft Visual Studio 2013
-
-. Known to build on Visual Studio Community 2013 update 4.
+- Microsoft Visual Studio 2013. Known to build on Visual Studio Community 2013 update 4.
 
 - .Net Framework 4.5.2, although it should compile with any 4.x version if you change the solution settings.
  
-- HDF5, version 1.8.15 win64 for Visual Studio 2013. You should make sure that your path environment variable points to the directory where the library was installed. You can get the HDF5 library at: 
+- HDF5, version 1.8.14 win64 for Visual Studio 2013. Versions 1.8.9 and later should work. You should make sure that your path environment variable points to the directory where the library was installed. The HDF5 library can be downloaded at: 
 http://www.hdfgroup.org/HDF5/release/obtain5.html  
 
+If you want to compile MPTCE as a 32-bit (x86) application, you should download the 32-bit version of the HDF5 library.
 
 
-Of course, you can also make use of a 32-bit version of this library, but you must remember to select x86 as the target architecture on all projects in the solution.
-
-
-- winusb.dll (also comes along with windows driver kit). This is required for building the ADS1298 server.
-
-
+- The WinUSB driver. This is required for building the ADS1298 server. It should get installed the first time the ADS1298 device is recognized by Windows. It can be found at:
 
 http://msdn.microsoft.com/en-us/library/windows/hardware/hh852365.aspx
-
-
-
-Or you can run Windows Update under Windows 7 after you plug the device into an USB port on your machine.
-
 
 
 VISUAL STUDIO SOLUTION CONTENTS
@@ -80,20 +65,19 @@ This solution comprises the following project subdirectories:
 
 * ./MPTCE/: The main program
 
-* ./EMGFramework/: Core libraries of the project. File I/O, pipeline, pipeline stages, pattern recognizers, threshold detection, data providers, and everything else that is not specific to the implementation of the main program or talks directly with the hardware lives here.
+* ./EMGFramework/: Core libraries of the project. File I/O, pipeline, pipeline stages, pattern recognizers, threshold detection, data providers, etc. Everything else that is not specific to the implementation of the main program or talks directly to the hardware lives here.
 
-* ./ADS1298Server/: Sever program which is used to retrieve data from the ADS1298 device.
+* ./ADS1298Server/: Sever program used to retrieve data from the ADS1298 device.
 
-* ./EPDevice/: Low-level code for controlling the ADS1298 device through the WinUSB driver. Used by the ADS1298Server.
+* ./EPDevice/: Code for controlling the ADS1298 device through the WinUSB driver. Used by the ADS1298Server.
 
-* ./ADS1298Intercom/: Interface and callbacks for communication between the ADS1298 server and the ADS1298 data provider contained in the EMGFramework project.
+* ./ADS1298Intercom/: Windows Communication Foundation (WCF) interface and callbacks for communication between the ADS1298 server and the ADS1298 data provider contained in the EMGFramework project.
 
-* ./QDGraph/: The Quick and Dirty Graph library. This is used to display EMG data.
+* ./QDGraph/: The Quick and Dirty Graph library used to display EMG data.
 
-* ./RecordingPlan/: Implements the control used for presenting the recording schedule in the recording tab.
+* ./RecordingPlan/: Implements the control used for presenting the recording schedule while recording data.
 
-* ./MPTCE_installer/: Should create an installer for MPTCE and the ADS1298 server
-.
+* ./MPTCE_installer/: Installer project for MPTCE and the ADS1298 server.
 
 * ./QDGraphTest/, ./RecordingPlanTest/, ./Tester/: Projects containing testing code for QDGraph, RecordingPlan and EMGFramework respectively.
 
@@ -102,20 +86,22 @@ This solution comprises the following project subdirectories:
 ADDITIONAL CONTENTS
 ===================
 
-* ./HDF5\ sample\ recordings/: 17 recordings in HDF5 format that were used during software testing
+* ./Matlab\ to\ HDF5\ conversion: A Matlab script used to convert memory structures used by BioPatRec TRE to .h5r (HDF5 recording) files compatible with MPTCE.
 
-* ./Matlab\ to\ HDF5\ conversion: A handy Matlab script used to convert memory structures used by BioPatRec TRE to .h5r (HDF5 recording) files.
-
-* ./Image\ resources/: Photographs and clipart used by the main program.
+* ./Image\ resources/: Photographs and clipart used by the program.
 
 * ./icons: Icon files used by MPTCE and the ADS1298Server
+
+
+++ Check out the recordings branch of the repository for recording samples.
+
 
 ACKNOWLEDGEMENTS
 ================
 
-* The code in EPDevice for accessing the ADS1298 device via USB has been provided by the Center for Medical Physics and Biomedical Engineering, at the Medical University of Vienna (http://www.zmpbmt.meduniwien.ac.at/)
+* The code in EPDevice for accessing the ADS1298 USB device has been provided by the Center for Medical Physics and Biomedical Engineering at the Medical University of Vienna (http://www.zmpbmt.meduniwien.ac.at/)
 
-* This software makes use of the Encog Machine Learning Framework by Jeff Heaton for supporting ANN-based pattern recognizers.You can find out more about it at 
+* This software makes use of the Encog Machine Learning Framework by Jeff Heaton for supporting ANN-based pattern recognizers. You can find more about it at 
 http://www.heatonresearch.com/encog
 
 
@@ -179,8 +165,4 @@ CHANGELOG
 
 
 
-
-
-
-
-0.1: Initial release
+0.1: Unpublished initial release
