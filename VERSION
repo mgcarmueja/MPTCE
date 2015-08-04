@@ -1,0 +1,49 @@
+MPTCE VERSION CHANGELOG
+=======================
+
+
+0.2 (current): 
+
+New features
+============
+
+* Corrected GUI behaviour. Removed unnecessary load/save buttons. 
+
+
+* Automatic rescaling of the amplitude axis of graphs the after a recording is finished 
+
+
+
+* Revised images used for guidance during recording. 
+
+* A progress bar is also shown during the warmup time at the beginning of the recording.
+
+* New approach for pattern recognition: only the classes corresponding to desired
+  movements are used at the classifier output.
+
+*
+ Selecting an activation function for MLP that has minimum or maximum values outside of the range [-1,1] causes the MLP pattern recognizer to automatically select for the output layer a Sigmoidal activation function [0,1] or a TANH activation function [-1,1].
+
+* Revised list of supported activation and normalization functions for each pattern recognition algorithm. 
+
+* New approach for threshold detection: noise amplitude detection is performed before recording starts and used as the lower level for threshold. Threshold maxima are defined by the maximum signal amplitude recorded for each channel.
+
+
+
+* New RealtimeConsumer for the generation of keystrokes.
+
+* Saving of a recording is finally possible. The same HDF5-based format as for loading files from BioPatRec is used.
+
+* Created an installer for both MPTCE and the ADS1298 server. The only prerequisite is .NET 4.5.2. .NET will be automatically downloaded and installed if not present.
+
+
+Known issues:
+=============
+
+* Saving files sometimes fails. Files appear not to close correctly after being written. This apparently causes later errors on opening files.
+
+* A noticeable delay on displaying data happens at the beginning of recording and real-time sessions.
+
+
+- 0.1 (unpublished initial release)
+
