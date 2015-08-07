@@ -10,8 +10,6 @@ VERSION 0.2 (Beta)
 
 =========================================================================
 
-
-
 MPTCE is an application that aims to enable people to use surface electromyography (sEMG) data acquisition devices at home for biofeedback training. sEMG signals are processed in order to generate codes for a set of predefined movements by using either threshold-based activation or different pattern recognition algorithms. The generated codes can then be mapped to keyboard events and used to control other programs. 
 
 This software is being developed in collaboration with the Christian Doppler Laboratory for Restoration of Extremity Function and ships with support for a Texas Instruments ADS1298-based USB EMG data acquisition device developed at the Center for Medical Physics and Biomedical Engineering, both at the Medical University of Vienna (Austria). A playback virtual device for simulation purposes is also included.
@@ -21,25 +19,15 @@ This software is being developed in collaboration with the Christian Doppler Lab
 DISCLAIMER
 ==========
 
-
-
 This software was initially developed as part of the work conducted by the author to
 obtain his Master’s degree. While the code has been reasonably tested, it lacks any medical certification and should be considered experimental. Therefore, the author cannot assume any liabilities derived from using it. USE THIS SOFTWARE AT YOUR OWN RISK!
-
-
 
 Also, please remember that connecting human beings to machines through electrodes poses the potential risk of electric shock.
 
 
 
-
-
-
-
 REQUIREMENTS
 ============
-
-
 
 MPTCE is delivered as a Visual Studio 2013 solution. In order to compile and run it, you will need:
 
@@ -52,12 +40,12 @@ http://www.hdfgroup.org/HDF5/release/obtain5.html
 
 If you want to compile MPTCE as a 32-bit (x86) application, you should download the 32-bit version of the HDF5 library.
 
-
 - The WinUSB driver. This is required for building the ADS1298 server. It should get installed the first time the ADS1298 device is recognized by Windows. It can be found at:
 
 http://msdn.microsoft.com/en-us/library/windows/hardware/hh852365.aspx
 
 * MPTCE has been extensively tested on Windows 7 Service Pack 1 for x64 only. The ADS1298 server does not run on Windows 8, 8.1 or 10 as of yet.
+
 
 
 VISUAL STUDIO SOLUTION CONTENTS
@@ -98,6 +86,7 @@ ADDITIONAL CONTENTS
 ++ Check out the recordings branch of the repository for recording samples.
 
 
+
 ACKNOWLEDGEMENTS
 ================
 
@@ -109,6 +98,7 @@ http://www.heatonresearch.com/encog
 * The QDGraph library uses WriteableBitmapEx (https://writeablebitmapex.codeplex.com/)
 
 * Spinning indicators were brought to life using the WPF Animated GIF library (https://github.com/thomaslevesque/WpfAnimatedGif)
+
 
 
 LICENSING
@@ -125,4 +115,3 @@ Application icons are licensed under a Creative Commons Attribution-ShareAlike 3
 All other clipart and images used in the software are released under a Creative Commons CC0 1.0 Universal License.
 
 See COPYING.HDF5 for the license of the HDF5 library
-
