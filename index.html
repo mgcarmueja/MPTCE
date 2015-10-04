@@ -25,21 +25,21 @@
 <h4>
 <a id="what-is-this" class="anchor" href="#what-is-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is this?</h4>
 
-<p>MPTCE is a Windows application that aims to enable people to use surface electromyography (sEMG) data acquisition devices at home for biofeedback training. This kind of training can help amputee patients on learning how to make the most effective use of bionic hand prostheses.</p>
+<p>MPTCE is a Windows application that aims to enable people to use surface electromyography (sEMG) data acquisition devices at home for biofeedback training. This can help amputee patients during the process of learning how to make the most effective use of bionic hand prostheses.</p>
 
 <h4>
 <a id="how-does-it-work" class="anchor" href="#how-does-it-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does it work?</h4>
 
-<p>MPTCE translates the intended hand movements executed by the user into control events that can be sent to third-party software such as games. Movement detection is achieved by using pattern recognition algorithms that analyze multiple channels of real-time sEMG data. These data are typically obtained through some sEMG data acquisition device. Getting MPTCE to recognise a set of hand movements involves the following steps:</p>
+<p>MPTCE translates muscle activations associated with hand movements executed by the user into control events. These control events can be then sent to third-party software such as games. Movement detection is achieved by using pattern recognition algorithms that analyze multiple channels of real-time sEMG data. These data are obtained through an sEMG data acquisition device. Getting MPTCE to recognise a set of hand movements involves the following steps:</p>
 
 <ol>
-<li><p><strong>Record a sample of the movements to be recognised:</strong> out-of-the-box available hand movements are open, close, flexion, extension, pronation and supination, as well as possible combinations of two or three of these six basic movements. </p></li>
-<li><p><strong>Run a feature extraction process:</strong> the recording is divided into 200ms-long windows. Each window is processed to extract a set of selectable features that characterise the sEMG signal at that point in time.</p></li>
-<li><p><strong>Train a pattern recognition algorithm:</strong> the features extracted on step 2 are presented to a user-selectable pattern recognition algorithm through a learning process.</p></li>
-<li><p><strong>Detect movements in real time:</strong> currently, only support for simulating keyboard events is included. Each movement can be mapped to any of the available keyboard events.</p></li>
+<li><p><strong>Recording a sample of the movements to be recognised:</strong> Available hand movements are open, close, flexion, extension, pronation and supination, as well as possible combinations of two or three of these six basic movements.</p></li>
+<li><p><strong>Running a feature extraction process:</strong> the recording is divided into small partially overlapping temporal windows. Each window is processed to extract a set of selectable features that characterise the sEMG signal at that point in time.</p></li>
+<li><p><strong>Training a pattern recognition algorithm:</strong> the features extracted on step 2 are presented to a user-selectable pattern recognition algorithm through a learning process.</p></li>
+<li><p><strong>Detecting movements in real time:</strong> currently, only keyboard events are supported. Each movement can be mapped to any of the available keyboard events.</p></li>
 </ol>
 
-<p>Additionally, MPTCE allows to perform movement detection based solely on the amplitude of the acquired sEMG signal reaching an user-defined level (threshold-based activation). This method can yield good results when only a reduced number of channels (1 or 2) is available. No feature extraction or training is required in this case, but a separate sample recording process as for pattern recognition based techniques must be carried out.</p>
+<p>Additionally, MPTCE supports movement detection based solely on the amplitude of the acquired sEMG signal reaching an user-defined level (threshold-based activation). This method can yield good results when only a reduced number of channels (e.g. less than 3) are available. No feature extraction or training is required when using threshold-based activation, but a separate sample recording process from that used for pattern recognition based techniques must be carried out.</p>
 
 <h4>
 <a id="latest-release-02" class="anchor" href="#latest-release-02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Latest release (0.2)</h4>
