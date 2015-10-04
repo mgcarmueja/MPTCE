@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="MPTCE : The Myoelectric Personal Training and Control Environment">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>MPTCE</title>
+    <meta charset="UTF-8">
+    <title>MPTCE by mgcarmueja</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">MPTCE</h1>
+      <h2 class="project-tagline">The Myoelectric Personal Training and Control Environment</h2>
+      <a href="https://github.com/mgcarmueja/MPTCE" class="btn">View on GitHub</a>
+      <a href="https://github.com/mgcarmueja/MPTCE/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/mgcarmueja/MPTCE/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mgcarmueja/MPTCE">View on GitHub</a>
-
-          <h1 id="project_title">MPTCE</h1>
-          <h2 id="project_tagline">The Myoelectric Personal Training and Control Environment</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/mgcarmueja/MPTCE/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/mgcarmueja/MPTCE/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
+    <section class="main-content">
+      <h3>
 <a id="welcome-to-the-home-page-of-mptce" class="anchor" href="#welcome-to-the-home-page-of-mptce" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the home page of MPTCE</h3>
 
 <h4>
@@ -45,10 +33,10 @@
 <p>MPTCE translates the intended hand movements executed by the user into control events that can be sent to third party software such as games. Movement detection is achieved by using pattern recognition algorithms that analyze multiple channels of realtime sEMG data. These data must be typically obtained through some sEMG data acquisition device. Getting MPTCE to recognise a set of hand movements involves the following steps:</p>
 
 <ol>
-<li><p>Record a sample of the movements to be recognised: out-of-the-box available hand movements are open, close, flexion, extension, pronation and supination, as well as possible combinations of two or three of these six basic movements. </p></li>
-<li><p>Run a feature extraction process: the recording is divided into 200ms-long windows. Each window is processed to extract a set of selectable features that characterise the sEMG signal at that point in time.</p></li>
-<li><p>Train a pattern recognition algorithm: the features extracted on step 2 are presented to a user-selectable pattern recognition algorithm through a learning process.</p></li>
-<li><p>Use the trained pattern recognition algorithm to detect movements in real time: currently, only support for simulating keyboard events is included. Each movement can be mapped to any of the available keyboard events.</p></li>
+<li><p><strong>Record a sample of the movements to be recognised:</strong> out-of-the-box available hand movements are open, close, flexion, extension, pronation and supination, as well as possible combinations of two or three of these six basic movements. </p></li>
+<li><p><strong>Run a feature extraction process:</strong> the recording is divided into 200ms-long windows. Each window is processed to extract a set of selectable features that characterise the sEMG signal at that point in time.</p></li>
+<li><p><strong>Train a pattern recognition algorithm:</strong> the features extracted on step 2 are presented to a user-selectable pattern recognition algorithm through a learning process.</p></li>
+<li><p><strong>Detect movements in real time:</strong> currently, only support for simulating keyboard events is included. Each movement can be mapped to any of the available keyboard events.</p></li>
 </ol>
 
 <p>Additionally, MPTCE allows to perform movement detection based solely on the amplitude of the acquired sEMG signal reaching an user-defined level (threshold-based activation). This method can yield good results when only a reduced number of channels (1 or 2) is available. No feature extraction or training is required in this case, but a separate sample recording process as for pattern recognition based techniques must be carried out.</p>
@@ -61,18 +49,15 @@
 <li><p>Go to the <a href="https://github.com/mgcarmueja/MPTCE/tree/0.2">source code on GitHub</a></p></li>
 <li><p>Check out the <a href="https://raw.githubusercontent.com/mgcarmueja/MPTCE/0.2/README">README</a></p></li>
 </ul>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">MPTCE maintained by <a href="https://github.com/mgcarmueja">mgcarmueja</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/mgcarmueja/MPTCE">MPTCE</a> is maintained by <a href="https://github.com/mgcarmueja">mgcarmueja</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
