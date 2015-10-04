@@ -7,7 +7,8 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #606c71; }
+  color: #606c71;
+  background-color: #000000;/**/}
 
 a {
   color: #1e6bb8;
@@ -23,16 +24,19 @@ a {
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 1px;
-  border-radius: 0.3rem;
+  border-radius: 0.6rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
   .btn + .btn {
     margin-left: 1rem; }
 
 .btn:hover {
-  color: rgba(255, 255, 255, 0.8);
+  /*color: rgba(255, 255, 255, 0.8);*/
+  color: rgba(0, 204, 255, 0.8);
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3); }
+  /*border-color: rgba(255, 255, 255, 0.3);*/
+  border-color: rgba(0, 204, 255, 0.3);
+}
 
 @media screen and (min-width: 64em) {
   .btn {
@@ -57,15 +61,23 @@ a {
   color: #fff;
   text-align: center;
   background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+  /*background-image: linear-gradient(120deg, #155799, #159957);*/
+  background-image: linear-gradient(180deg, #00CCFF, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000);
+}
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 5rem 6rem; } }
+    /*padding: 5rem 6rem;*/
+    padding: 1rem 1rem;
+  }
+}
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
-    padding: 3rem 4rem; } }
+    /*padding: 3rem 4rem;*/
+  padding: 1rem 1rem;
+  }
+}
 
 @media screen and (max-width: 42em) {
   .page-header {
@@ -105,16 +117,20 @@ a {
     font-size: 1rem; } }
 
 .main-content :first-child {
-  margin-top: 0; }
+  margin-top: 0;
+}
 .main-content img {
   max-width: 100%; }
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color: #159957; }
+  /*color: #159957;*/
+  color: #00CCFF;
+}
 .main-content p {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 .main-content code {
   padding: 2px 4px;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
