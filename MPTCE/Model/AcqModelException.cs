@@ -25,22 +25,37 @@ using System.Threading.Tasks;
 
 namespace MPTCE.Model
 {
+    /// <summary>
+    /// Generic exception thrown by the AcqModel class
+    /// </summary>
     [Serializable]
-   public  class AcqModelException:Exception
+    public class AcqModelException : Exception
     {
-           public AcqModelException()
-    {
-    }
+        /// <summary>
+        /// 
+        /// </summary>
+        public AcqModelException()
+        {
+        }
 
-    public AcqModelException(string message)
-        : base(message)
-    {
-    }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        public AcqModelException(string message)
+            : base(message)
+        {
+        }
 
-    public AcqModelException(string message, Exception inner)
-        : base(message, inner)
-    {
-    }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="inner"></param>
+        public AcqModelException(string message, Exception inner)
+            : base(message, inner)
+        {
+        }
 
     }
 }

@@ -25,22 +25,35 @@ using System.Threading.Tasks;
 
 namespace MPTCE.ViewModel
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class AcqDevice
     {
         private int _idTag;
         private string _name;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public int idTag
         {
             get { return _idTag; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string name
         {
             get { return _name; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idTag"></param>
+        /// <param name="name"></param>
         public AcqDevice(int idTag, string name)
         {
             _idTag = idTag;

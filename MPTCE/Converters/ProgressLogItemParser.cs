@@ -29,12 +29,20 @@ using System.ComponentModel;
 namespace MPTCE.Converters
 {
     /// <summary>
-    /// Implemented as an IValueConverter, it parses the string of a ProgressLogItem for known tags
+    /// Implemented as an IValueConverter, it parses the string of a ProgressLogItem for known tags.
+    /// It does not do anything useful as of yet.
     /// </summary>
     public class ProgressLogItemParser:IValueConverter
     {
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns></returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             string input = (string)value;
@@ -43,6 +51,14 @@ namespace MPTCE.Converters
             return output;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns></returns>
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();

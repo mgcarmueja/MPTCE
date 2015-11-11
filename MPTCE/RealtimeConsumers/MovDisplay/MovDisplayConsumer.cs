@@ -34,19 +34,26 @@ namespace MPTCE.RealtimeConsumers
     public class MovDisplayConsumer:RealtimeConsumer
     {
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public new static string ID
         {
             get { return "movDisplay"; }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public new static string displayName
         {
             get { return "Movement display"; }
         }
 
         private string _movementName="No movement";
+        /// <summary>
+        /// Name of the movement being displayed by the NovDisplayConsumer object
+        /// </summary>
         public string movementName
         {
             get 
@@ -66,6 +73,9 @@ namespace MPTCE.RealtimeConsumers
 
 
         private int _movementCode=-1;
+        /// <summary>
+        /// Code associated to the movement being displayed.
+        /// </summary>
         public int movementCode
         {
             get
@@ -88,7 +98,9 @@ namespace MPTCE.RealtimeConsumers
 
         private Task _taskToRun;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public MovDisplayConsumer()
         :base()
         {
@@ -101,7 +113,9 @@ namespace MPTCE.RealtimeConsumers
         }
 
         
-        
+        /// <summary>
+        /// Starts the GetMovements() method as a new Task.
+        /// </summary>
         public override void Start()
         {
             //Initialization tasks
@@ -114,7 +128,9 @@ namespace MPTCE.RealtimeConsumers
             _taskToRun = Task.Run(new Action(GetMovements));
         }
 
-
+        /// <summary>
+        /// Waits for the the Task running the GetMovements() method to finish.
+        /// </summary>
         public override void Stop()
         {
             //Wait for the task to finish

@@ -34,7 +34,14 @@ namespace MPTCE.Converters
     public class MovCodeToStringConverter : IValueConverter
     {
         
- 
+        /// <summary>
+        /// Performs the conversion
+        /// </summary>
+        /// <param name="value">Movement code to convert.</param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns>a string describing the movement associated to the input movement code.</returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             char[] separatorList = new char[] { ',' };
@@ -68,7 +75,14 @@ namespace MPTCE.Converters
             return null;       
         }
 
-
+        /// <summary>
+        /// This is a dummy method that allows the Converter to comply with the IValueConverter interface. 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="targetType"></param>
+        /// <param name="parameter"></param>
+        /// <param name="culture"></param>
+        /// <returns></returns>
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return null;

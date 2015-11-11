@@ -33,20 +33,29 @@ namespace MPTCE.RealtimeConsumers.Keyboard
     /// </summary>
     public class Key
     {
-
+        /// <summary>
+        /// Display name
+        /// </summary>
         public string name
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Code associated to the key. This is what will be sent to other programs by the virtual keyboard.  
+        /// </summary>
         public VirtualKeyCode keyCode
         {
             get;
             set;
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="newName"></param>
+        /// <param name="newKeyCode"></param>
         public Key(string newName, VirtualKeyCode newKeyCode)
         {
             name = newName;

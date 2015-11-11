@@ -30,7 +30,9 @@ namespace MPTCE.Dialogs
 {
 
 
-
+    /// <summary>
+    /// ViewModel for the DialogMovementSelector class
+    /// </summary>
     public class DialogMovementSelectorViewModel:INotifyPropertyChanged
     {
 
@@ -51,7 +53,9 @@ namespace MPTCE.Dialogs
         /// </summary>
         public ObservableCollection<ScheduleItem> availableMovements{get; set;}
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public DialogMovementSelectorViewModel()
         {
             availableMovements = new ObservableCollection<ScheduleItem>();

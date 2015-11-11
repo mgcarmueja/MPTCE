@@ -30,7 +30,7 @@ namespace MPTCE.RealtimeConsumers.Keyboard
 {
     /// <summary>
     /// Defines the mapping of a movement to a key. This class implements INotifyPropertyChanged because this is
-    /// required for a BindingList<Keymapping> to produce ListChanged events when the contents of one of its elements is changed.
+    /// required for a BindingList&lt;Keymapping&gt; to produce ListChanged events when the contents of one of its elements is changed.
     /// </summary>
     public class Keymapping:INotifyPropertyChanged
     {

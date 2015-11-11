@@ -25,18 +25,33 @@ using System.Threading.Tasks;
 
 namespace MPTCE.ViewModel
 {
+    /// <summary>
+    /// Genreic exception thrown by the ReaViewModel class
+    /// </summary>
     [Serializable]
     public class ReaViewModelException : Exception
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public ReaViewModelException()
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
         public ReaViewModelException(string message)
             : base(message)
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="inner"></param>
         public ReaViewModelException(string message, Exception inner)
             : base(message, inner)
         {

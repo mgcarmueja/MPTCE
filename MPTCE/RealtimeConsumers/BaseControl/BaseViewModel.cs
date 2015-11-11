@@ -26,6 +26,9 @@ using System.ComponentModel;
 
 namespace MPTCE.RealtimeConsumers
 {
+    /// <summary>
+    /// Base View model upon which every RealtimeConsumer is based
+    /// </summary>
     public class BaseViewModel:INotifyPropertyChanged
     {
 
@@ -43,6 +46,9 @@ namespace MPTCE.RealtimeConsumers
 
         private bool _running;
         
+        /// <summary>
+        /// True if the RealTimeConsumer is running, false otherwise
+        /// </summary>
         public bool running
         {
             get 
@@ -62,6 +68,9 @@ namespace MPTCE.RealtimeConsumers
 
 
         private string _itemName="*Empty*";
+        /// <summary>
+        /// Item name used as on-screen title for the RealTimeConsumer
+        /// </summary>
         public string itemName
         {
             get
@@ -81,6 +90,9 @@ namespace MPTCE.RealtimeConsumers
 
 
         private RealtimeConsumer _realtimeConsumer;
+        /// <summary>
+        /// RealTimeConsumer object associated with this ViewModel
+        /// </summary>
         public RealtimeConsumer realtimeConsumer
         {
             get
@@ -102,13 +114,15 @@ namespace MPTCE.RealtimeConsumers
         }
 
 
-
         public BaseViewModel()
         {
             this.PropertyChanged += BaseViewModel_PropertyChanged;
         }
 
 
+        /// <summary>
+        /// Starts the RealtimeConsumer if stopped, stops it if started, and does nothing if none was defined
+        /// </summary>
         public void StartStop()
         {
             if(_realtimeConsumer!=null) _realtimeConsumer.StartStop();

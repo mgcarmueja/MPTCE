@@ -31,6 +31,9 @@ using System.Windows.Media.Imaging;
 
 namespace MPTCE.RealtimeConsumers
 {
+    /// <summary>
+    /// ViewModel for the RealTimeConsumer-derived class used to display the movement being detected
+    /// </summary>
     public class MovDisplayViewModel : INotifyPropertyChanged
     {
 
@@ -39,6 +42,10 @@ namespace MPTCE.RealtimeConsumers
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propName"></param>
         public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
@@ -48,6 +55,9 @@ namespace MPTCE.RealtimeConsumers
 
         private MovDisplayConsumer _movDisplayConsumer;
 
+        /// <summary>
+        /// Associated MovDisplayConsumer object
+        /// </summary>
         public MovDisplayConsumer movDisplayConsumer
         {
             get
@@ -71,6 +81,9 @@ namespace MPTCE.RealtimeConsumers
 
         }
 
+        /// <summary>
+        /// Provides access to the movementName attribute of the associated MovDisplayConsumer object
+        /// </summary>
         public string movementName
         {
             get
@@ -81,6 +94,9 @@ namespace MPTCE.RealtimeConsumers
             }
         }
 
+        /// <summary>
+        /// Provides access to the movementCode attribute of the associated MovDisplayConsumer object 
+        /// </summary>
         public int movementCode
         {
             get
@@ -91,7 +107,9 @@ namespace MPTCE.RealtimeConsumers
 
 
         private BitmapImage _movementBitmap;
-
+        /// <summary>
+        /// Bitmap displaying a movement
+        /// </summary>
         public BitmapImage movementBitmap
         {
             get
@@ -110,7 +128,9 @@ namespace MPTCE.RealtimeConsumers
 
         private List<BitmapImage> _imageList;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public MovDisplayViewModel()
         {
             this.PropertyChanged += MovDisplayViewModel_PropertyChanged;
@@ -211,9 +231,6 @@ namespace MPTCE.RealtimeConsumers
 
             return imageList;
         }
-
-
-
 
     }
 }

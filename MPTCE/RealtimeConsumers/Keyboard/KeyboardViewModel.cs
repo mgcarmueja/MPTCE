@@ -28,6 +28,9 @@ using MPTCE.RealtimeConsumers.Keyboard;
 
 namespace MPTCE.RealtimeConsumers
 {
+    /// <summary>
+    /// ViewModel for the keyboard RealtimeConsumer
+    /// </summary>
     public class KeyboardViewModel : INotifyPropertyChanged
     {
 
@@ -36,6 +39,10 @@ namespace MPTCE.RealtimeConsumers
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propName"></param>
         public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
@@ -45,6 +52,9 @@ namespace MPTCE.RealtimeConsumers
 
 
         private KeyboardConsumer _keyboardConsumer;
+        /// <summary>
+        /// KeyboardConsumer object using this ViewModel 
+        /// </summary>
         public KeyboardConsumer keyboardConsumer
         {
             get
@@ -68,7 +78,9 @@ namespace MPTCE.RealtimeConsumers
         }
 
 
-
+        /// <summary>
+        /// Provides access to the keyboardActive attribute in the associated KeyboardConsumer object
+        /// </summary>
         public string keyboardActive
         {
             get 
@@ -85,9 +97,10 @@ namespace MPTCE.RealtimeConsumers
             }
         }
 
-
+        /// <summary>
+        /// Provides access to the singleStroke attribute in the associated KeyboardConsumer object
+        /// </summary>
         public bool singleStroke
-
         {
             get
             {
@@ -149,7 +162,9 @@ namespace MPTCE.RealtimeConsumers
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public KeyboardViewModel()
         {
             this.PropertyChanged += KeyboardViewModel_PropertyChanged;

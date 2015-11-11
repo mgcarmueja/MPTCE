@@ -34,6 +34,9 @@ using MPTCE.Model;
 
 namespace MPTCE.ViewModel
 {
+    /// <summary>
+    /// ViewModel class for the treatment stage
+    /// </summary>
     public class TrtViewModel : INotifyPropertyChanged
     {
         /// <summary>
@@ -42,7 +45,10 @@ namespace MPTCE.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propName"></param>
         public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
@@ -68,7 +74,9 @@ namespace MPTCE.ViewModel
         }
         
 
-
+        /// <summary>
+        /// Provides access to the acqRecording property of the associated TrtModel object.
+        /// </summary>
         public Recording acqRecording
         {
             get 
@@ -88,6 +96,9 @@ namespace MPTCE.ViewModel
 
 
         private List<string> _features;
+        /// <summary>
+        /// List containing the names of the available features.
+        /// </summary>
         public List<string> features
         {
             get
@@ -106,7 +117,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Number of DataWindow objects to be stored in each training set
+        /// </summary>
         public int trainingSetSize
         {
             get
@@ -124,7 +137,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Number of DataWindow objects to be stored in each validation set
+        /// </summary>
         public int validationSetSize
         {
             get
@@ -144,6 +159,9 @@ namespace MPTCE.ViewModel
 
 
         private int _totalSetSize;
+        /// <summary>
+        /// Combined size of training and validation sets for each movement
+        /// </summary>
         public int totalSetSize
         {
             get 
@@ -162,7 +180,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// List containing the names of the features that will be extracted for each DataWindow object.
+        /// </summary>
         public ObservableCollection<string> selectedFeatures
         {
             get 
@@ -174,7 +194,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Returns the value of the treated property defined in the associated TrtModel object. 
+        /// </summary>
         public bool treated
         {
             get 
@@ -184,7 +206,9 @@ namespace MPTCE.ViewModel
 
         }
 
-
+        /// <summary>
+        /// Provides read/write access to the randomWindowSelection property of the associated TrtModel object 
+        /// </summary>
         public bool randomWindowSelection
         {
             get 
@@ -199,7 +223,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Read only access to the includeRests property of the associated TrtModel object
+        /// </summary>
         public bool includeRests
         {
             get 
@@ -248,7 +274,7 @@ namespace MPTCE.ViewModel
 
         /// <summary>
         /// Complementary to the running property on the model. Used to disable controls while 
-        /// treatment is runnings
+        /// treatment is running
         /// </summary>
         public bool notRunning
         {
@@ -272,7 +298,7 @@ namespace MPTCE.ViewModel
 
 
         /// <summary>
-        /// true if the tab corresponding with this ViewModel at the UI should be active, false otherwise
+        ///True if the tab corresponding with this ViewModel at the UI should be active. False otherwise.
         /// </summary>
         public bool tabActive
         { 
@@ -283,7 +309,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public TrtViewModel()
         {
             this.PropertyChanged += TrtViewModel_PropertyChanged;
@@ -382,7 +410,7 @@ namespace MPTCE.ViewModel
 
 
         /// <summary>
-        /// It configures the viewModel with its default values.
+        /// It configures the TrtViewModel with its default values.
         /// </summary>
         public void Configure()
         {
@@ -419,6 +447,7 @@ namespace MPTCE.ViewModel
             //trtModel.ProcessRecording();
         }
 
+        /*
         public void LoadFromFile(string fileName)
         {
             //treated = true; // This is done when the loaded data are assigned to the model
@@ -427,6 +456,7 @@ namespace MPTCE.ViewModel
         public void SaveToFile(string fileName)
         {
         }
+        */
 
         /// <summary>
         /// This method should clear the treated or loaded data in the model

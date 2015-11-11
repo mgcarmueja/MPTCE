@@ -35,13 +35,17 @@ namespace MPTCE.RealtimeConsumers
     public class TestConsumer:RealtimeConsumer
     {
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public new static string ID
         {
             get { return "test"; }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public new static string displayName
         {
             get { return "Test item"; }
@@ -49,6 +53,9 @@ namespace MPTCE.RealtimeConsumers
 
 
         private bool _checkMe;
+        /// <summary>
+        /// It stores the status of a checkbox in the GUI
+        /// </summary>
         public bool checkMe
         {
             get 
@@ -70,6 +77,9 @@ namespace MPTCE.RealtimeConsumers
        
 
         private string _movement;
+        /// <summary>
+        /// Name of the movement being detected during real time movement recognition.
+        /// </summary>
         public string movement
         {
             get 
@@ -89,6 +99,9 @@ namespace MPTCE.RealtimeConsumers
 
 
         private string _applicationActive;
+        /// <summary>
+        /// True if the current active window belongs to this application. False otherwise.
+        /// </summary>
         public string applicationActive
         { 
             get
@@ -113,7 +126,9 @@ namespace MPTCE.RealtimeConsumers
 
         private Task _taskToRun;
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public TestConsumer()
         :base()
         {
@@ -130,7 +145,9 @@ namespace MPTCE.RealtimeConsumers
 
         }
 
-        
+        /// <summary>
+        /// Executes the TestLoad() method as a new Task
+        /// </summary>
         public override void Start()
         {
             //Initialization tasks
@@ -143,7 +160,9 @@ namespace MPTCE.RealtimeConsumers
             _taskToRun = Task.Run(new Action(TestLoad));
         }
 
-
+        /// <summary>
+        /// This method does currently nothing.
+        /// </summary>
         public override void Stop()
         {
             //Wait for the task to finish
@@ -159,12 +178,9 @@ namespace MPTCE.RealtimeConsumers
         private void TestLoad()
         {
            
-           
 
             foreach (Movement movementObject in movementQueue.GetConsumingEnumerable())
             {
-                
-
                 movement="[" + (string)_converter.Convert(movementObject.idTag, null, null, null) + "]";
                 applicationActive = "Active: " + movementObject.metadata.applicationActive.ToString();
             }

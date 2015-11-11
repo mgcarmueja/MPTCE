@@ -32,6 +32,9 @@ using MPTCE.Model;
 
 namespace MPTCE.ViewModel
 {
+    /// <summary>
+    /// ViewModel for the training stage of the program
+    /// </summary>
     public class TraViewModel : INotifyPropertyChanged
     {
 
@@ -56,7 +59,9 @@ namespace MPTCE.ViewModel
             private set;
         }
 
-
+        /// <summary>
+        /// List containing the names of the pattern recognizers supported by the underlying model
+        /// </summary>
         public List<string> supportedPatternRecognizers
         {
             get
@@ -65,6 +70,9 @@ namespace MPTCE.ViewModel
             }
         }
 
+        /// <summary>
+        /// List of the names of the activation functions supported by the pattern recognizer selected in the underlying model
+        /// </summary>
         public List<string> supportedActivationFunctions
         {
             get
@@ -73,6 +81,9 @@ namespace MPTCE.ViewModel
             }
         }
 
+        /// <summary>
+        /// List of the names of the normalizers supported by the pattern recognizer selected in the underlying model
+        /// </summary>
         public List<string> supportedNormalizers
         {
             get
@@ -82,6 +93,9 @@ namespace MPTCE.ViewModel
 
         }
 
+        /// <summary>
+        /// Integer index of the selected pattern recognizer on the selection list in the GUI
+        /// </summary>
         public int patternRecognizerIdx
         {
             get
@@ -94,7 +108,9 @@ namespace MPTCE.ViewModel
             }
         }
 
-
+        /// <summary>
+        /// Integer index of the selected activation function on the selection list in the GUI
+        /// </summary>
         public int activationFunctionIdx
         {
             get
@@ -110,6 +126,9 @@ namespace MPTCE.ViewModel
 
 
         private string _selectedPatternRecognizer;
+        /// <summary>
+        /// Name of the selected pattern recognizer
+        /// </summary>
         public string selectedPatternRecognizer
         {
             get
@@ -129,6 +148,9 @@ namespace MPTCE.ViewModel
 
 
         private string _selectedActivationFunction;
+        /// <summary>
+        /// Name of the selected activation function
+        /// </summary>
         public string selectedActivationFunction
         {
             get
@@ -149,6 +171,9 @@ namespace MPTCE.ViewModel
 
 
         private string _selectedNormalizer;
+        /// <summary>
+        /// Name of the selected normalizer
+        /// </summary>
         public string selectedNormalizer
         {
             get
@@ -166,7 +191,9 @@ namespace MPTCE.ViewModel
 
         }
 
-
+        /// <summary>
+        /// Access to the trainingPackage attribute of the underlying model
+        /// </summary>
         public TrainingPackage trainingPackage
         {
             get
@@ -182,7 +209,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Access to the selectionTrainingPackage attribute of the underlying model
+        /// </summary>
         public TrainingPackage selectionTrainingPackage
         {
             get
@@ -290,7 +319,9 @@ namespace MPTCE.ViewModel
             }
         }
 
-
+        /// <summary>
+        /// Access to the randomizeSets property of the underlying model
+        /// </summary>
         public bool randomizeSets
         {
             get
@@ -321,7 +352,9 @@ namespace MPTCE.ViewModel
         public BlockingCollection<ProgressLogItem> concurrentLogList { get; private set; }
 
 
-
+        /// <summary>
+        /// Access to the MultipleActivationSupport property of the underlying model
+        /// </summary>
         public bool multipleActivationSupport
         {
             get
@@ -375,7 +408,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Access to the multipleActivationEnabled propery of the underlying model
+        /// </summary>
         public bool multipleActivationEnabled
         {
             get
@@ -391,7 +426,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Boolean complementary of the multipleActivationEnabled property of the underlying model
+        /// </summary>
         public bool explicitMovements
         {
             get
@@ -476,7 +513,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public TraViewModel()
         {
             this.PropertyChanged += TraViewModel_PropertyChanged;
@@ -670,6 +709,9 @@ namespace MPTCE.ViewModel
         private Task _fillLogTask;
         private Task _runTrainingTask;
 
+        /// <summary>
+        /// Executes the RunTraining method of the underlying model in a new thread
+        /// </summary>
         public void RunTraining()
         {
             training = true;
@@ -683,7 +725,7 @@ namespace MPTCE.ViewModel
             //and that should happen within the _runTrainingTask.
         }
 
-
+        /*
         public void SaveToFile(string filename)
         {
 
@@ -692,8 +734,11 @@ namespace MPTCE.ViewModel
         public void LoadFromFile(string filename)
         {
         }
+        */
 
-
+        /// <summary>
+        /// Clears the training data from the model and the training log
+        /// </summary>
         public void ClearData()
         {
             traModel.ClearData();

@@ -25,18 +25,33 @@ using System.Threading.Tasks;
 
 namespace MPTCE.ViewModel
 {
+    /// <summary>
+    /// Generic exception thrown by the AcqViewModel class
+    /// </summary>
     [Serializable]
     public class AcqViewModelException : Exception
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public AcqViewModelException()
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
         public AcqViewModelException(string message)
             : base(message)
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="inner"></param>
         public AcqViewModelException(string message, Exception inner)
             : base(message, inner)
         {

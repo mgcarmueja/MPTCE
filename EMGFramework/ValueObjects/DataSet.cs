@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 namespace EMGFramework.ValueObjects
 {
     /// <summary>
-    /// A Data set containing a description of the movement it represents and associated DataWindows
+    /// A Data set containing a description of the movement it represents and associated DataWindow objects
     /// with extracted features, which is to be part of a TrainingPackage 
     /// </summary>
     public class DataSet

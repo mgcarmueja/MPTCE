@@ -25,22 +25,38 @@ using System.Threading.Tasks;
 
 namespace MPTCE.Model
 {
-   [Serializable]
-   public  class ReaModelException:Exception
-    {
-           public ReaModelException()
-    {
-    }
 
-    public ReaModelException(string message)
-        : base(message)
+    /// <summary>
+    /// Generic exception thrown by the ReaModel class 
+    /// </summary>
+    [Serializable]
+    public class ReaModelException : Exception
     {
-    }
+        /// <summary>
+        /// 
+        /// </summary>
+        public ReaModelException()
+        {
+        }
 
-    public ReaModelException(string message, Exception inner)
-        : base(message, inner)
-    {
-    }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        public ReaModelException(string message)
+            : base(message)
+        {
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="inner"></param>
+        public ReaModelException(string message, Exception inner)
+            : base(message, inner)
+        {
+        }
 
     }
 }

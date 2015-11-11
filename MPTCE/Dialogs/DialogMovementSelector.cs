@@ -34,17 +34,27 @@ namespace MPTCE.Dialogs
     /// </summary>
     public class DialogMovementSelector : MovementSelector
     {
-
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="movementNames"></param>
+        /// <param name="availableMovements"></param>
         public DialogMovementSelector(StringCollection movementNames, List<ScheduleItem> availableMovements)
             : base(movementNames, availableMovements)
         { }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public DialogMovementSelector()
             : base()
         { }
 
-
+        /// <summary>
+        /// Shows a dialog window allowing the selection of movements and returns the list of ScheduleItem
+        /// objects representing the set of movements that were selected
+        /// </summary>
+        /// <returns></returns>
         public override List<ScheduleItem> SelectMovements()
         {
             List<ScheduleItem> selected = new List<ScheduleItem>();

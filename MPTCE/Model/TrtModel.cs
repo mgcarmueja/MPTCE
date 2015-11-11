@@ -33,6 +33,13 @@ using EMGFramework.Utility;
 
 namespace MPTCE.Model
 {
+    /// <summary>
+    /// This class implements the model of the treatment stage. It is responsible of processing a Recording into 
+    /// a TrainingPackage containing DataWindow objects distributed across different DataSet objects. Each DataSet object
+    /// corresponds to a given movement code. Two DataSet objects are created for each movement: one for training and 
+    /// other for verification purposes. Once created, the TrainingPackage will be made available through a public property.
+    /// From there, it can be delivered to the TraModel object responsible for training a PatternRecognizer object.
+    /// </summary>
     public class TrtModel:INotifyPropertyChanged
     {
         
@@ -51,6 +58,10 @@ namespace MPTCE.Model
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propName"></param>
         public void NotifyPropertyChanged(string propName)
         {
             if (this.PropertyChanged != null)
@@ -97,7 +108,7 @@ namespace MPTCE.Model
 
         private Recording _acqRecording;
         /// <summary>
-        /// Acquisition recording, either just recorded or loaded from a file at the acquisition stage.
+        /// Acquisition recording, either recorded or loaded from a file at the acquisition stage.
         /// </summary>
         public Recording acqRecording
         {
@@ -189,7 +200,7 @@ namespace MPTCE.Model
 
         private bool _includeRests;
         /// <summary>
-        /// True if rest-related DataWindows should be included in the TrainingPackage, false otherwise
+        /// True if rest-related DataWindows should be included in the TrainingPackage. False otherwise.
         /// </summary>
         public bool includeRests
         {
@@ -232,7 +243,9 @@ namespace MPTCE.Model
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
         public TrtModel()
         {
             _treatmentConfig = new TreatmentConfig();
@@ -244,7 +257,7 @@ namespace MPTCE.Model
 
 
         /// <summary>
-        /// Initialisation of components and configurations
+        /// Initialization of components and configurations
         /// </summary>
         public void Init()
         {
@@ -314,7 +327,6 @@ namespace MPTCE.Model
         /// and trimming the beginnings and ends of the contraction periods by a factor given by the 
         /// contractionTimePercentage attribute of the TreatmentConfig class. 
         /// </summary>
-        /// <param name="inputFrames"></param>
         private void Pretreat()
         {
             int startPos = 0;

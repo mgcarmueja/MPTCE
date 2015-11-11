@@ -25,13 +25,34 @@ using System.Threading.Tasks;
 
 namespace MPTCE.ViewModel
 {
+    /// <summary>
+    /// Global ViewModel for the complete application. This class was projected but currently not used by the program.
+    /// </summary>
     public class AppViewModel
-    {
+    {   
+        /// <summary>
+        /// 
+        /// </summary>
         public AcqViewModel acqViewModel;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public TrtViewModel trtViewModel;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public TraViewModel traViewModel;
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public ReaViewModel reaViewModel;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public AppViewModel()
         {
 

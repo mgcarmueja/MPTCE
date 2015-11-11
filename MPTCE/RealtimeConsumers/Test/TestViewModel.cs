@@ -26,6 +26,9 @@ using System.ComponentModel;
 
 namespace MPTCE.RealtimeConsumers
 {
+    /// <summary>
+    /// ViewModel class for the test RealtimeConsumer
+    /// </summary>
     public class TestViewModel : INotifyPropertyChanged
     {
 

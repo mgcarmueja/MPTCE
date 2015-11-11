@@ -963,7 +963,9 @@ namespace MPTCE.ViewModel
             readyToSave = false;
         }
 
-
+        /// <summary>
+        /// Calls the StopRecording method in the underlying model
+        /// </summary>
         public void StopRecording()
         {
             try
@@ -982,7 +984,9 @@ namespace MPTCE.ViewModel
             }
         }
 
-
+        /// <summary>
+        /// Calls the PauseRecording method in the underlying model
+        /// </summary>
         public void PauseRecording()
         {
             try
@@ -999,7 +1003,9 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Calls the ResumeRecording method in the underlying model
+        /// </summary>
         public void ResumeRecording()
         {
             try
@@ -1015,7 +1021,10 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Calls the LoadFromFile method in the underlying model
+        /// </summary>
+        /// <param name="fileName"></param>
         public void LoadFromFile(string fileName)
         {
             try
@@ -1034,7 +1043,10 @@ namespace MPTCE.ViewModel
         }
 
 
-
+        /// <summary>
+        /// Calls the SaveToFile method in the underlying model
+        /// </summary>
+        /// <param name="fileName">Name of the file to save</param>
         public void SaveToFile(string fileName)
         {
             try
