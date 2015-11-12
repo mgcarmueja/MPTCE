@@ -140,6 +140,10 @@
       <Project>{b9c7819a-3292-4708-b395-e96ebe59f15b}</Project>
       <Name>EMGFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RecordingPlan\RecordingPlan.csproj">
+      <Project>{02e4dd67-e214-4b71-a6d1-6698472406ac}</Project>
+      <Name>RecordingPlan</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\close.JPG">

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="c598a0c2-c346-4d15-8d73-4a4d32321c51" visible="True" title="Welcome to MPTCE">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="Welcome" />
+    </HelpKeywords>
+  </Topic>
+  <Topic id="cec5c8c5-64d9-4ef6-8e42-bf0ddbd840bc" visible="True" isExpanded="true" title="Version History">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="version, history" />
+    </HelpKeywords>
+    <Topic id="967751a3-17d2-4a75-905e-da52c0bddcb1" visible="True" title="Version 1.0.0.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version, 1.0.0.0" />
+      </HelpKeywords>
+    </Topic>
+  </Topic>
+  <Topic id="9c0957a0-2e2c-4671-a615-5bc91aae961a" visible="True" isSelected="true" apiParentMode="InsertAsChild" title="API reference">
+    <HelpKeywords>
+      <HelpKeyword index="K" term="API, reference" />
+    </HelpKeywords>
+  </Topic>
+</Topics>

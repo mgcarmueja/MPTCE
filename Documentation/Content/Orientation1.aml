@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="9c0957a0-2e2c-4671-a615-5bc91aae961a" revisionNumber="1">
+  <developerOrientationDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <!--
+    <summary>
+      <para>Optional summary abstract</para>
+    </summary>
+    -->
+
+    <introduction>
+      <para>The following high level namespaces are defined in the solution: </para>
+    </introduction>
+
+    <!-- <inThisSection>Optional description of content in this section</inThisSection> -->
+
+    <reference>
+      <content>
+        <list class="bullet">
+         
+          <listItem>
+            <para>
+              MPTCE.*: The main program
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              EMGFramework.*: Core libraries of the project. File I/O, pipeline, pipeline stages, pattern recognizers, threshold detection, data providers, etc. Everything else that is not specific to the implementation of the main program or talks directly to the hardware lives here.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              EPDevice.*: Code for controlling the ADS1298 device through the WinUSB driver. Used by the ADS1298Server.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              ADS1298Server: Sever program used to retrieve data from the ADS1298 device.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              ADS1298Intercom.*: Windows Communication Foundation (WCF) interface and callbacks for communication between the ADS1298 server and the ADS1298 data provider contained in the EMGFramework project.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              QDGraph.*: The Quick and Dirty Graph library used to display EMG data.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              RecordingPlan.*: Implements the control used for presenting the recording schedule while recording data.
+            </para>
+          </listItem>
+
+          <listItem>
+            <para>
+              QDGraphTest.*, RecordingPlanTest.*, Tester.* : Contain testing code for QDGraph, RecordingPlan and EMGFramework respectively.
+            </para>
+          </listItem>
+
+
+        </list>      
+      </content>
+    </reference>
+
+
+    <!-- <relatedSections>Optional related sections info</relatedSections> -->
+
+    <!-- <externalResources>Optional external resources section</externalResources> -->
+
+    <relatedTopics>
+      <!-- One or more of the following:
+           - A local link
+           - An external link
+           - A code entity reference
+
+      <link xlink:href="Other Topic's ID">Link text</link>
+      <externalLink>
+          <linkText>Link text</linkText>
+          <linkAlternateText>Optional alternate link text</linkAlternateText>
+          <linkUri>URI</linkUri>
+      </externalLink>
+      <codeEntityReference>API member ID</codeEntityReference>
+
+      Examples:
+
+      <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
+
+      <externalLink>
+          <linkText>SHFB on GitHub</linkText>
+          <linkAlternateText>Go to GitHub</linkAlternateText>
+          <linkUri>https://GitHub.com/EWSoftware/SHFB</linkUri>
+      </externalLink>
+
+      <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
+      <codeEntityReference>P:TestDoc.TestClass.SomeProperty</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.#ctor(System.String,System.Int32)</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.ToString</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.FirstMethod</codeEntityReference>
+      <codeEntityReference>M:TestDoc.TestClass.SecondMethod(System.Int32,System.String)</codeEntityReference>
+      -->
+    </relatedTopics>
+  </developerOrientationDocument>
+</topic>
