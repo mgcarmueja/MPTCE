@@ -71,6 +71,7 @@ This solution comprises the following project subdirectories:
 
 * ./QDGraphTest/, ./RecordingPlanTest/, ./Tester/: Projects containing testing code for QDGraph, RecordingPlan and EMGFramework respectively.
 
+* ./Documentation/: Sandcastle project for automatically generating documentation.
 
 
 ADDITIONAL CONTENTS
