@@ -55,7 +55,7 @@ This solution comprises the following project subdirectories:
 
 * ./MPTCE/: The main program
 
-* ./EMGFramework/: Core libraries of the project. File I/O, pipeline, pipeline stages, pattern recognizers, threshold detection, data providers, etc. Everything else that is not specific to the implementation of the main program nor talks directly to the hardware lives here.
+* ./EMGFramework/: Core libraries of the project. File I/O, pipeline, pipeline stages, pattern recognizers, threshold detection, data providers, etc. Everything else belonging to the backend and not specific to the implementation of the main program nor talking directly to the hardware lives here.
 
 * ./ADS1298Server/: Sever program used to retrieve data from the ADS1298 device.
 
